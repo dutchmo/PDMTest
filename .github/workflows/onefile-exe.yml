@@ -44,7 +44,7 @@ jobs:
         with:
           script-name: main.py
           onefile: true
-          include-data-files: ./stopwatch.tss=stopwatch.tss
+          include-data-files: stopwatch.tss=stopwatch.tss
           windows-icon-from-ico: ./ao-icon.ico
 
       # Uploads artifacts
