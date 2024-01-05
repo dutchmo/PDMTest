@@ -44,10 +44,8 @@ jobs:
         with:
           script-name: main.py
           onefile: true
-          verbose-output: nuitka.log
-          include-data-file: ./stopwatch.tss
-          windows-icon-from-ico: ao-icon.ico
-          linux-icon: ./ao-icon.ico
+          include-data-files: ./stopwatch.tss
+          windows-icon-from-ico: ./ao-icon.ico
 
       # Uploads artifacts
       - name: "Upload Artifacts"
