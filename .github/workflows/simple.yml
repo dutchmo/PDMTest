@@ -32,6 +32,5 @@ jobs:
       - name: Workspace
         run: |
           echo "Github workspace1: ${{github.workspace}}"
-          echo "Github workspace2: ${{github[workspace]}}" 
           echo "Github workspace3: ${GITHUB_WORKSPACE}" 
           echo "Github workspace4: $GITHUB_WORKSPACE" 
