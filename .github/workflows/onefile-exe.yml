@@ -47,7 +47,7 @@ jobs:
         with:
           script-name: main.py
           onefile: true
-          include-data-files: ${{GITHUB_WORKSPACE}}/stopwatch.tss=stopwatch.tss
+          include-data-files: ${GITHUB_WORKSPACE}/stopwatch.tss=stopwatch.tss
           windows-icon-from-ico: ${{GITHUB_WORKSPACE}}/ao-icon.ico
 
       # Uploads artifacts
