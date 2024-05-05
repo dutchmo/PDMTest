@@ -1,0 +1,91 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "f5da969c-4b88-4db5-b635-74a722ba5695",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Mon, 28 Aug 2023 21:56:13 GMT",
+      "content-type": "application/json",
+      "content-length": "2320",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "f5da969c-4b88-4db5-b635-74a722ba5695"
+    },
+    "RetryAttempts": 0
+  },
+  "Status": 200,
+  "DataSet": {
+    "Arn": "arn:aws:quicksight:us-east-1:148737032803:dataset/e7845f2c-c663-43d0-8edd-974e052eaf6f",
+    "DataSetId": "e7845f2c-c663-43d0-8edd-974e052eaf6f",
+    "Name": "vw_22_receiveddateemployerparticipation",
+    "CreatedTime": "2021-03-07 11:10:06.484000-06:00",
+    "LastUpdatedTime": "2023-05-03 20:42:26.350000-05:00",
+    "PhysicalTableMap": {
+      "7eba1db6-dd8a-436a-bea8-795e4a506625": {
+        "RelationalTable": {
+          "DataSourceArn": "arn:aws:quicksight:us-east-1:148737032803:datasource/1796ed5c-f48f-4c18-ba66-c1092d306ea8",
+          "Schema": "espoperational",
+          "Name": "vw_22_receiveddateemployerparticipation",
+          "InputColumns": [
+            {
+              "Name": "received_month",
+              "Type": "DATETIME"
+            },
+            {
+              "Name": "activeemployersthismonth",
+              "Type": "INTEGER"
+            },
+            {
+              "Name": "activeemployersthisyear",
+              "Type": "INTEGER"
+            }
+          ]
+        }
+      }
+    },
+    "LogicalTableMap": {
+      "7eba1db6-dd8a-436a-bea8-795e4a506625": {
+        "Alias": "vw_22_receiveddateemployerparticipation",
+        "DataTransforms": [
+          {
+            "RenameColumnOperation": {
+              "ColumnName": "activeemployersthismonth",
+              "NewColumnName": "Active Employers"
+            }
+          },
+          {
+            "ProjectOperation": {
+              "ProjectedColumns": [
+                "received_month",
+                "Active Employers",
+                "activeemployersthisyear"
+              ]
+            }
+          }
+        ],
+        "Source": {
+          "PhysicalTableId": "7eba1db6-dd8a-436a-bea8-795e4a506625"
+        }
+      }
+    },
+    "OutputColumns": [
+      {
+        "Name": "received_month",
+        "Type": "DATETIME"
+      },
+      {
+        "Name": "Active Employers",
+        "Type": "INTEGER"
+      },
+      {
+        "Name": "activeemployersthisyear",
+        "Type": "INTEGER"
+      }
+    ],
+    "ImportMode": "SPICE",
+    "ConsumedSpiceCapacityInBytes": 252,
+    "DataSetUsageConfiguration": {
+      "DisableUseAsDirectQuerySource": false,
+      "DisableUseAsImportedSource": false
+    }
+  },
+  "RequestId": "f5da969c-4b88-4db5-b635-74a722ba5695"
+}

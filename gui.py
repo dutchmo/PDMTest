@@ -7,7 +7,39 @@ from textual.widgets import Button, Footer, Header, Static
 
 
 class TimeDisplay(Static):
-    """A widget to display elapsed time."""
+    """
+
+    ================================
+    TimeDisplay
+    ================================
+
+    :class:`TimeDisplay` is a class that displays and updates time in hours, minutes, and seconds.
+
+    Attributes
+    ----------
+    start_time : :class:`reactive`
+        The start time of the timer, in monotonic time.
+    time : :class:`reactive`
+        The current time of the timer, in seconds.
+    total : :class:`reactive`
+        The total time elapsed, in seconds.
+
+    Methods
+    -------
+    on_mount() -> None
+        Event handler called when widget is added to the app.
+    update_time() -> None
+        Method to update time to current.
+    watch_time(time: float) -> None
+        Called when the time attribute changes.
+    start() -> None
+        Method to start (or resume) time updating.
+    stop()
+        Method to stop the time display updating.
+    reset()
+        Method to reset the time display to zero.
+
+    """
 
     start_time = reactive(monotonic)
     time = reactive(0.0)
@@ -45,7 +77,9 @@ class TimeDisplay(Static):
 
 
 class Stopwatch(Static):
-    """A stopwatch widget."""
+    """
+
+    """
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         """Event handler called when a button is pressed."""
@@ -69,7 +103,9 @@ class Stopwatch(Static):
 
 
 class StopwatchApp(App):
-    """A Textual app to manage stopwatches."""
+    """
+    StopwatchApp Class
+    """
 
     CSS_PATH = "stopwatch.tcss"
 

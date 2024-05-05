@@ -1,0 +1,28 @@
+# Tables
+[project]
+name = "Squadron"
+description = "Manage Quicksight assets across multiple accounts"
+version = "1.0.0"
+updated = '2024-01-27'
+author = "Dutch Matous"
+start_url = "https://d-9a672a20bb.awsapps.com/start"
+
+# Nested `tables` (dict of dict)
+[defaults]
+debug = false
+groups = ["Admin", "Manager", "Quicksight_Admin"]
+region = "us-east-1"
+role_name = "QuicksightAdmin"
+
+
+[[profile]]
+name="dutch-main"
+account_id = '164855401782'
+region = 'us-east-2'
+role = "SystemAdministrator"
+
+[[profile]]
+name="dutch-other"
+account_id= '148737032803'
+role = "SystemAdministrator"
+

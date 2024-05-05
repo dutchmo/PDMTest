@@ -15,6 +15,7 @@ TimeDisplay {
 
 Button {
     width: 16;
+    opacity: 50%;  /* make buttons semi-transparent */
 }
 
 #start {
@@ -41,13 +42,13 @@ Button {
 }
 
 .started #start {
-    display: none
+    display: none;
 }
 
 .started #stop {
-    display: block
+    display: block;
 }
 
 .started #reset {
-    visibility: hidden
+    visibility: hidden;
 }
